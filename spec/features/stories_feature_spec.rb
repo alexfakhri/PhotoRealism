@@ -24,11 +24,11 @@ end
 
 describe 'creating stories' do
 
-  it 'prompts user to fill out a form, then display the new story' do
+  it 'prompts user to fill out a form, then displays the new story' do
     visit '/stories'
     click_link 'Add a story'
     fill_in 'Title', with: 'Story-1'
-    save_and_open_page
+    fill_in 'Story', with: 'This is one epicly short story'
     click_button 'Create Story'
     expect(page).to have_content 'Story-1'
     expect(current_path).to eq '/stories'
@@ -36,5 +36,6 @@ describe 'creating stories' do
 
 
 
-
 end
+
+context
