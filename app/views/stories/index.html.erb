@@ -1,2 +1,9 @@
-No stories yet!
-<a href='#'>Add a story</a>
+<% if @stories.any? %>
+  <% @stories.each do |story| %>
+    <h2> <%= story.title %> </h2>
+  <% end %>
+<% else %>
+  No stories yet!
+<% end %>
+
+  <a href='#'>Add a story</a>
