@@ -1,5 +1,7 @@
 class StoriesController < ApplicationController
 
+
+
   def index
     @stories = Story.all
   end
@@ -13,10 +15,12 @@ class StoriesController < ApplicationController
   	redirect_to '/stories'
   end
 
-
+  def show
+  	@story = Story.find(params[:id])
+  end
 
   def story_params
-  	params.require(:story).permit(:title, :article)
+  	params.require(:story).permit(:title, :article, :image)
   end
 
 end

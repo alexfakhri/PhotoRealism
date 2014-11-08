@@ -33,9 +33,27 @@ describe 'creating stories' do
     expect(page).to have_content 'Story-1'
     expect(current_path).to eq '/stories'
   end
+end
 
+context 'viewing stories' do
 
+  before do
+    @article = Story.create(title: 'Story-1', image_file_name: '/public/iamges/medium/test.jpg')
+  end
+
+  it 'should see the most recent photos posted' do
+    visit '/stories'
+    expect(page).to have_css('img')
+  end
+
+  it 'clicking on a photo should take a user to the story' do
+    visit '/stories'
+    click_link 'Test'
+    expect(current_path).to eq "/stories/#{@article.id}"
+  end
 
 end
 
-context
+
+
+

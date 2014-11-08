@@ -1,8 +1,9 @@
-<%= form_for @story do |f| %>
+<%= form_for @story, html: {multipart: true} do |f| %>
 	<%= f.label :title %>
 	<%= f.text_field :title %>
 	<%= f.label :article, 'Story' %>
 	<%= f.text_area :article %>
+	<%= f.file_field :image %>
 	<%= f.submit %>
 <% end %>
 
