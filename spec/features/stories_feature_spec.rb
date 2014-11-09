@@ -53,7 +53,3 @@ context 'viewing stories' do
   end
 
 end
-
-
-
-
