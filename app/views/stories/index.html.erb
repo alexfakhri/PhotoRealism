@@ -1,3 +1,9 @@
+<div class="jumbotron">
+	<% story = Story.find(1) %>
+       <%= image_tag story.image.url(:medium) %>
+	<p></p>
+</div>
+
 <% if @stories.any? %>
   <% @stories.each do |story| %>
     <h2> <%= link_to "#{story.title}", story_path(story) %> </h2>
@@ -8,4 +14,4 @@
   No stories yet!
 <% end %>
 
-  <a href='stories/new'>Add a story</a>
+ 
