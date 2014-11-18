@@ -1,28 +1,42 @@
-== README
+Title
+=======================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Synopsis
 
-Things you may want to cover:
+TODO: Enter a description of your project here.
 
-* Ruby version
+![NAME_OF_IMAGE](http://ENTER_URL)
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+- LANGUAGE_ONE
+- LANGUAGE_TWO
+- FRAMEWORK
+- TESTING SUITES
 
-* Database creation
+## Job List
 
-* Database initialization
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
-* How to run the test suite
+## Favourite Code Snippet
 
-* Services (job queues, cache servers, search engines, etc.)
+~~~
+ TODO: paste code here
+~~~
 
-* Deployment instructions
+## Collaborators
 
-* ...
+- NAME_ONE (http://www.github.com/USERNAME)
+- NAME_TWO (http://www.github.com/USERNAME)
 
+## Still to complete/refactor
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- [ ]
+- [ ]
+
+## Takeaway
+
+TODO: Enter a personal reflection and/or things you learnt
