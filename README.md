@@ -3,16 +3,15 @@ Title
 
 ## Synopsis
 
-TODO: Enter a description of your project here.
+Blog allowing varied permissions and posting of feature of images and captions.
 
 ![NAME_OF_IMAGE](http://ENTER_URL)
 
 ## Technologies Used
 
-- LANGUAGE_ONE
-- LANGUAGE_TWO
-- FRAMEWORK
-- TESTING SUITES
+- Languages: Ruby, Javascript
+- Frameworks: Rails
+- Testing Suites: Rspec, Jasmin
 
 ## Job List
 
@@ -29,8 +28,8 @@ TODO: Enter a description of your project here.
 
 ## Collaborators
 
-- NAME_ONE (http://www.github.com/USERNAME)
-- NAME_TWO (http://www.github.com/USERNAME)
+- Alex Fakhri (http://www.github.com/alexfakhri)
+- Nicole Pellicena (http://www.github.com/NicolePell)
 
 ## Still to complete/refactor
 
