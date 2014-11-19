@@ -7,16 +7,22 @@
 <% else %>
   No stories yet!
 <% end %>
+<div id="map" style="height: 35em;">
+  <script>
+  	var map;
+  	$(document).ready(function(){
+      map = new GMaps({
+  	  	div: '#map',
+  	  	lat: 54,
+  	  	lng: -2.5,
+        zoom: 2,
+        zoomControl: true,
+        zoomControlOpt: {
+          position: 'LEFT_CENTER'
+        },
+        scrollwheel: false,
+  	  });
+  	});
+  </script>
 
-<script>
-	var map;
-	$(document).ready(function(){
-    map = new GMaps({
-	  	div: '#map',
-	  	lat: 54,
-	  	lng: -2.5,
-	  });
-	});
-</script>
-
-<div id="map" style="height: 20em;"></div>
+</div>
