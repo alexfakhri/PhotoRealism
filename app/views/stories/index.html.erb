@@ -7,3 +7,16 @@
 <% else %>
   No stories yet!
 <% end %>
+
+<script>
+	var map;
+	$(document).ready(function(){
+    map = new GMaps({
+	  	div: '#map',
+	  	lat: 54,
+	  	lng: -2.5,
+	  });
+	});
+</script>
+
+<div id="map" style="height: 20em;"></div>

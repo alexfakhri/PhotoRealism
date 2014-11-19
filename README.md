@@ -11,7 +11,7 @@ Blog allowing varied permissions and posting of feature of images and captions.
 
 - Languages: Ruby, Javascript
 - Frameworks: Rails
-- Testing Suites: Rspec, Jasmin
+- Testing Suites: Rspec, Jasmine
 
 ## Job List
 
