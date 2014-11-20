@@ -88,3 +88,18 @@ context 'editing stories' do
     expect(current_path).to eq '/stories'
   end
 end
+
+context 'deleting stories' do
+
+  before do
+    @article = Story.create(title: 'Story-1', image_file_name: '/public/images/medium/test.jpg')
+  end
+
+  it 'lets a user deleted a story' do
+    visit '/stories'
+    click_link 'Delete Story-1'
+    save_and_open_page
+    expect(page).to have_content 'Story-1 has been deleted successfully'
+  end
+
+end
