@@ -1,6 +1,7 @@
 <% if @stories.any? %>
   <% @stories.each do |story| %>
     <h2> <%= link_to "#{story.title}", story_path(story) %> </h2>
+    <h4><%= link_to "Edit #{story.title}", edit_story_path(story) %> </h4>
 
    <%= link_to (image_tag "#{story.image.url(:thumb)}"), story_path(story) %>
   <% end %>

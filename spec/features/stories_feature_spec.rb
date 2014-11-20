@@ -72,3 +72,19 @@ context 'viewing stories' do
   end
 
 end
+
+context 'editing stories' do
+
+  before do
+    @article = Story.create(title: 'Story-1', image_file_name: '/public/images/medium/test.jpg')
+  end
+
+  it 'lets a user edit a story' do
+    visit '/stories'
+    click_link 'Edit Story-1'
+    fill_in 'Title', with: 'Epic Story'
+    click_button 'Update Story'
+    expect(page).to have_content 'Epic Story'
+    expect(current_path).to eq '/stories'
+  end
+end

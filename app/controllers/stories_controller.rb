@@ -17,6 +17,17 @@ class StoriesController < ApplicationController
   	@story = Story.find(params[:id])
   end
 
+  def edit
+    @story = Story.find(params[:id])
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    @story.update(story_params)
+
+    redirect_to '/stories'
+  end
+
   def story_params
   	params.require(:story).permit(:title, :article, :image)
   end
