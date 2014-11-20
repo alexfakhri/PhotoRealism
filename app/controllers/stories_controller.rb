@@ -2,6 +2,7 @@ class StoriesController < ApplicationController
 
   def index
     @stories = Story.all
+    @map_stories = Story.all
   end
 
   def new

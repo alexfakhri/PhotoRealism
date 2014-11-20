@@ -28,3 +28,24 @@
   </script>
 
 </div>
+
+<% if @map_stories.any? %>
+  <% @map_stories.each do |story| %>
+
+    <%= javascript_tag do %>
+      $(document).ready(function(){
+          map.addMarker({
+            lat: <%= story.latitude %>,
+            lng: <%= story.longitude %>,
+            title: 'Lima',
+              infoWindow: { content: '<%= story.title %></br><%= image_tag story.image.url(:thumb) %>' },
+              click: function(e) {
+
+              }
+          });
+        });
+    <% end %>
+  <% end %>
+    <% else %>
+      <h1>No stories yet!</h1>
+  <% end %>
