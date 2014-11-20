@@ -2,15 +2,10 @@ require 'rails_helper'
 
 describe 'user not signed in and on the homepage' do
 
+
   it 'should see a sign in link and a sign up link' do
     visit '/'
-    expect(page).to have_link('Tell a Story')
-  end
-
-  it "Should click on 'Tell a story' link and be directed to new user page" do
-    visit '/'
-    click_link('Tell a Story')
-    expect(current_path).to eq new_user_registration_path
+    expect(page).to_not have_link('Tell a Story')
   end
 
   it "should see 'sign up' and 'sign out' links" do
@@ -47,11 +42,6 @@ context "User signed in on the home page" do
       expect(page).not_to have_link('Sign up')
     end
 
-    it "Should click on 'Tell a story' link and be directed to new user page" do
-    visit '/'
-    click_link('Tell a Story')
-    expect(current_path).to eq new_story_path
-  end
 
 
 end

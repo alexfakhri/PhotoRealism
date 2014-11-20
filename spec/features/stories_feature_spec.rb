@@ -2,6 +2,16 @@ require 'rails_helper'
 
 describe 'stories' do
   context 'no stories have been added' do
+
+    before do
+      visit '/'
+      click_link('Sign up')
+      fill_in('Email', with: 'test@example.com')
+      fill_in('Password', with: 'testtest')
+      fill_in('Password confirmation', with: 'testtest')
+      click_button('Sign up')
+    end
+
     it 'should display a prompt to add a story' do
       visit '/stories'
       expect(page).to have_content 'No stories'
@@ -23,6 +33,15 @@ describe 'stories' do
 end
 
 describe 'creating stories' do
+
+    before do
+      visit '/'
+      click_link('Sign up')
+      fill_in('Email', with: 'test@example.com')
+      fill_in('Password', with: 'testtest')
+      fill_in('Password confirmation', with: 'testtest')
+      click_button('Sign up')
+    end
 
   it 'prompts user to fill out a form, then displays the new story' do
     visit '/stories'
