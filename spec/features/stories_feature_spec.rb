@@ -52,6 +52,20 @@ describe 'creating stories' do
     expect(page).to have_content 'Story-1'
     expect(current_path).to eq '/stories'
   end
+
+  it 'prompts the user to fill out the location' do
+    visit '/stories'
+    click_link 'Add a story'
+    fill_in 'Title', with: 'Story-1'
+    fill_in 'Story', with: 'This is one epicly short story'
+    fill_in 'Location', with: 'London'
+    click_button 'Create Story'
+    click_link 'Story-1'
+    expect(page).to have_content 'London'
+  end
+
+
+
 end
 
 context 'viewing stories' do
