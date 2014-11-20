@@ -98,8 +98,8 @@ context 'deleting stories' do
   it 'lets a user deleted a story' do
     visit '/stories'
     click_link 'Delete Story-1'
-    save_and_open_page
-    expect(page).to have_content 'Story-1 has been deleted successfully'
+    expect(page).not_to have_content 'Story-1'
+    expect(page).to have_content 'Story has been deleted successfully'
   end
 
 end
